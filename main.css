@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(121, 189, 248);
+}
+
+.container {
+    width: 500px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+div#retorno {
+    margin-bottom: 6px;
+    color: rgb(243, 243, 243);
+}
+
+input, button, div#retorno {
+    display: block;
+    width: 60%;
+    padding: 8px;
+    margin-bottom: 3px;
+}
+
+button {
+    background-color: rgb(117, 151, 245);
+    cursor: pointer;
+    font-weight: bolder;
+    color: rgb(243, 243, 243);
+    text-transform: uppercase;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+input {
+    font-size: 16px;
+}
+
+div#retorno {
+    font-size: 16px;
+    /*border: 2px solid rgb(101, 182, 101);
+    background-color: rgb(50, 202, 50);*/
+    color:rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+#botaoVerificar:hover {
+    background-color: rgb(42, 81, 165);
+}
+
+header {
+    background-color: white;
+    width: 500px;
+    text-align: center;
+    color: black;
+    font: normal 14px Arial;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+#formNum {
+    text-align: center;
+    padding: 4px;
+}
+
+input {
+    border: 1px solid black;
+}
+/*#msgErro {
+    text-align:justify;
+    font: bold 14px Arial;
+    margin: 0px 0px 3px 0px;
+    color:white;
+    background-color: rgb(200, 40, 40);
+    border: 2px solid rgb(150, 40, 40);
+    display: block;
+    width: 80%;
+}*/
+
+
