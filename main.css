@@ -77,3 +77,21 @@ ul li {
     color: red;
     text-decoration: line-through;
 }
+
+
+#lista-de-tarefas {
+    max-height: 300px;
+    overflow-y: scroll;
+    background-color: transparent;
+}
+
+/*Deixa a barra do scroll transparente*/
+#lista-de-tarefas::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+/*Estiliza a barra de rolagem*/
+#lista-de-tarefas::-webkit-scrollbar-thumb {
+    background-color: rgb(162, 210, 255);
+    border-radius: 5px;
+}
