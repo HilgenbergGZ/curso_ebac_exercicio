@@ -1,52 +1,27 @@
-let num1 = document.getElementById("numeroA")
-let num2 = document.getElementById("numeroB")
-let retorno = document.getElementById("retorno")
-let erro = document.getElementById("msgErro")
-let n = document.querySelector("button#botaoVerificar")
+$(document).ready(function() {
 
-// Esse comando serve para a página não atualizar automaticamente
-/*addEventListener("submit", function(e){
-    let verif = false;
-    e.preventDefault()
-})*/
+    const listaTarefas = $("#lista-de-tarefas")
 
-// função que verifica se o número(A) é maior que o numéro(B)
-function verificar() {
-    let numA = Number(num1.value)
-    let numB = Number(num2.value) 
-    if (numB > numA){
-        retorno.innerHTML = `<strong>Você digitou: ${numA} e ${numB}. O número(B) é maior!<strong>`
-        retorno.style.border = "2px solid rgb(50, 150, 50)"
-        retorno.style.background = "rgb(50, 190, 50)"
-        n.innerHTML = ("Clique para confirmar!")
-        botaoVerificar.onclick = function() { return true; };
-        erro.innerText = ""
-        num2.style.marginBottom = "6px"
-        num2.style.border = "1px solid black"
+    //Adiciona um evento click nos elementos listados e uma função que trás
+    //a formatação da classe "tarefaConcluida"
+    listaTarefas.on("click", "li", function(){
+        $(this).toggleClass("tarefaConcluida")
+    }) 
 
-    }  else {
-        retorno.innerHTML = `<strong>Você digitou: ${numA} e ${numB}` 
-        retorno.style.border = "2px solid rgb(150, 40, 40)"
-        retorno.style.background = "rgb(200, 40, 40)"
-        num2.style.border = "4px solid rgb(150, 40, 40)"
-        erro.innerText = "Digite um número maior para o Número(B)!"
-        erro.style.color = "white"
-        erro.style.textAlign = "justify"
-        erro.style.font = "bold 14px Arial"
-        erro.style.margin = "-3px 0px 1px 0px"
-        erro.style.background = "rgb(200, 40, 40)"
-        erro.style.border = "2x solid rgb(150, 40, 40)"
-        erro.style.display = "block"
-        erro.style.width = "60%"
-    }
-    if (numA == '' && numB == ''){
-        let numA = Number(num1.value)
-        let numB = Number(num2.value) 
-        retorno.innerText = `Atenção! Nenhum valor foi inserido!`
-        num2.style.border = "none"
-        retorno.style.border = "none"
-        num2.style.border = "1px solid black"
-        num2.style.margin = "0px 0px 3px 0px"
-    }
-}
 
+    //Quando o botão do tipo submit é clicado ele ativa a function
+    //A function evita que a página seja recarregada automaticamente
+    //A funciton "puxa" o conteúdo do que é digitado no input #tarefa e deixa na const tarefa
+    //uma div com a lista é criada e armazenada na lista de tarefas que foi criada lá em cima
+    //por fim, o input é zerado
+    $("form").on("submit", function(e){
+        e.preventDefault()
+        const tarefa = $("#tarefa").val()
+        $(`
+        <div>
+            <li>${tarefa}</li>
+        </div>`).appendTo(listaTarefas)
+        $("#tarefa").val("")
+    })
+
+})

@@ -1,87 +1,79 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
 body {
-    background-color: rgb(121, 189, 248);
+    background-color: rgba(168, 229, 253, 0.603);
 }
 
 .container {
-    width: 500px;
-    margin: auto;
-    padding-top: 40px;
+    width: 300px;
+    height: 400px;
+    background-image: url(./imagens/agenda.png);
+    background-size: 300px 700px;
+    color: rgb(162, 210, 255);
+    margin: 20px auto;
+    text-align: center;
 }
 
-div#retorno {
-    margin-bottom: 6px;
-    color: rgb(243, 243, 243);
+header h1 {
+    text-align: center;
+    font-family: 'Londrina Sketch', cursive;
+    padding-top: 60px;
+    padding-left: 28px;
 }
 
-input, button, div#retorno {
-    display: block;
-    width: 60%;
-    padding: 8px;
-    margin-bottom: 3px;
+input, button {
+    color: rgb(162, 210, 255);
+    border-color: rgb(162, 210, 255);
+    padding: 6px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Londrina Sketch', cursive;
+}
+
+.adicionar {
+    text-align: center;
+}
+
+input:focus {
+    outline-color: rgb(255, 174, 0);
+}
+
+input:focus::placeholder {
+    color: rgb(255, 174, 0);
+}
+
+input::placeholder {
+    color: rgb(162, 210, 255);
+    
 }
 
 button {
-    background-color: rgb(117, 151, 245);
+    background-color: rgb(255, 255, 255);
     cursor: pointer;
-    font-weight: bolder;
-    color: rgb(243, 243, 243);
-    text-transform: uppercase;
-    font-size: 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-
 }
 
-input {
-    font-size: 16px;
+button:hover {
+    border-color: rgb(255, 174, 0);
+    color: rgb(255, 174, 0);
 }
 
-div#retorno {
-    font-size: 16px;
-    /*border: 2px solid rgb(101, 182, 101);
-    background-color: rgb(50, 202, 50);*/
-    color:rgb(255, 255, 255);
-    border-radius: 10px;
-}
-
-#botaoVerificar:hover {
-    background-color: rgb(42, 81, 165);
-}
-
-header {
-    background-color: white;
-    width: 500px;
-    text-align: center;
+ul li {
+    font-family: 'Cabin Sketch', cursive;
     color: black;
-    font: normal 14px Arial;
-    border-radius: 10px;
-    padding: 4px;
+    font-size: 20px;
+    margin-top: 22px;
+    list-style: none;
+    text-align: left;
+    margin-left: 70px;
+    cursor: pointer;
 }
 
-#formNum {
-    text-align: center;
-    padding: 4px;
+.tarefaConcluida {
+    color: red;
+    text-decoration: line-through;
 }
-
-input {
-    border: 1px solid black;
-}
-/*#msgErro {
-    text-align:justify;
-    font: bold 14px Arial;
-    margin: 0px 0px 3px 0px;
-    color:white;
-    background-color: rgb(200, 40, 40);
-    border: 2px solid rgb(150, 40, 40);
-    display: block;
-    width: 80%;
-}*/
-
-

@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade módulo-07</title>
+
     <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Londrina+Sketch&display=swap" rel="stylesheet">
+
+    <title>Lista de Tarefas</title>
 </head>
 <body>
     <div class="container">
-    <header>
-        <h1>Validando o maior número</h1>
-        <h2>O programa irá verificar se o número(A) é maior que o número(B)</h2>
-    </header>
-        <form id="formNum">
-            <input type="number" name="numeroA" id="numeroA" placeholder="Digite o número(A)">
-            <input type="number" name="numeroB" id="numeroB" placeholder="Digite o número(B)">
-            <div id="msgErro"></div>
-            <button type="submit" name="botaoVerificar" id="botaoVerificar" value="verificar" onclick="verificar(); return false">Validar</button>
-            <div id="retorno"></div>
-        </form>
+        <header>
+            <h1>Lista de Tarefas</h1>
+        </header>
+            <ul id="lista-de-tarefas">
+                <div>
+                </div>
+            </ul>
     </div>
+    <form class="adicionar">
+        <input type="text" id="tarefa" placeholder="Digite a tarefa">
+        <button type="submit">Adicionar</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
