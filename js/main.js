@@ -1,15 +1,10 @@
 $(document).ready(function(){
-    $("#carouselImagens").slick({
-        autoplay: true
-    })
-
-    $(".menuHamburguer").click(function(){
-        $("nav").slideToggle()
-    })
 
     $("#telefone").mask("(00) 00000-0000")
 
-    $("#telefone-fixo").mask("(00) 0000-0000")
+    $("#cpf").mask("000.000.000-00")
+
+    $("#cep").mask("00000-000")
 
     $("form").validate({
         rules: {
@@ -25,21 +20,23 @@ $(document).ready(function(){
                 minlength: 15,
                 maxlength: 15
             },
-            telefoneFixo: {
-                required: false
+            cpf: {
+                required: true
             },
-            veiculoInteresse: {
-                required: false
+            endereco: {
+                required: true
             },
-            mensagem: {
+            cep: {
                 required: true
             }
         },
         messages: {
-            nome: "Por favor, insira seu nome!",
-            email: "Por favor, digite seu e-mail!",
-            telefone: "Este campo é obrigatório!",
-            mensagem: "Este campo é obrigatório!",
+            nome: "",
+            email: "",
+            telefone: "",
+            cpf: "",
+            endereco: "",
+            cep: ""
         },
         submitHandler: function(form) {
             alert("Envio feito com sucesso!")
@@ -54,17 +51,5 @@ $(document).ready(function(){
                 alert(`Existem ${camposIncorretos} campos incorretos!`)
             }
         }
-    })
-
-    $(".lista-veiculos button").click(function(){
-        const destino = $("#contato")
-
-        const nomeVeiculo = $(this).parent().find("h3").text()
-
-        $("#veiculoInteresse").val(nomeVeiculo)
-
-        $("html").animate({
-            scrollTop: destino.offset().top
-        }, 1000)
     })
 })
