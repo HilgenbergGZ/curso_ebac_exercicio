@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.lista__produto {
+  max-width: 640px;
+  width: 100%;
+  margin: 56px auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 1%;
+}
+.lista__produto__nome {
+  font-size: 1.2em;
+  margin: 8px 0;
+}
+.lista__produto__imagem {
+  width: 100%;
+}
+.lista__produto__descricao {
+  color: gray;
+}
+.lista__produto__item--destaque {
+  border: 2px solid gold;
+  padding: 8px;
+  background-color: #ffff42;
+}
+
+/*# sourceMappingURL=main.css.map */
